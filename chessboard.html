@@ -5,6 +5,21 @@
     <title>Chessboard</title>
 </head>
 <body>
-    
+    <table style="width: 270px; height: 270px">
+        {% for row in color_array %}
+        <tr>
+            {% for col in row %}
+                {% if col == 'b' %}
+                <td>
+                    <div style="width: 30px; height: 30px; background-color: #fff047"></div>
+                </td>
+                {% if col == 'w' %}
+                <td>
+                    <div style="width: 30px; height: 30px; background-color: #ff00b8"></div>
+                </td>
+            {%endfor%}
+        </tr>
+        {%endfor%}
+    </table>
 </body>
 </html>
