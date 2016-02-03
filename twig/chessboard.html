@@ -5,18 +5,19 @@
     <title>Chessboard</title>
 </head>
 <body>
-    <table style="width: 270px; height: 270px">
+    <table style="width: 270px; border: 1px solid">
         {% for row in color_array %}
         <tr>
             {% for col in row %}
                 {% if col == 'b' %}
                 <td>
-                    <div style="width: 30px; height: 30px; background-color: #fff047"></div>
+                    <div style="border: 1px solid; width: 30px; height: 30px; background-color: #fff047"></div>
                 </td>
-                {% if col == 'w' %}
+                {% else %}
                 <td>
-                    <div style="width: 30px; height: 30px; background-color: #ff00b8"></div>
+                    <div style="border: 1px solid; width: 30px; height: 30px; background-color: #ff00b8"></div>
                 </td>
+                {% endif %}
             {%endfor%}
         </tr>
         {%endfor%}

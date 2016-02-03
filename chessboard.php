@@ -10,16 +10,15 @@ require_once '/Users/tih99924/Desktop/phpChessboard/vendor/autoload.php';
 $loader = new Twig_Loader_Filesystem('/Users/tih99924/Desktop/phpChessboard/twig/');
 $twig = new Twig_Environment($loader);
 
-
 $color_array = array();
 
 for ($row = 0; $row < 8; $row++) {
     for ($col = 0; $col < 8; $col++) {
         if (($row + $col) % 2 == 0) {
-            $color_array[$row][$col] == 'w';
+            $color_array[$row][$col] = 'w';
         }
         else {
-            $color_array[$row][$col] == 'b';
+            $color_array[$row][$col] = 'b';
         }
     }
 }
