@@ -5,16 +5,20 @@
     <title>Chessboard</title>
 </head>
 <body>
+    <!-- Table to represent the chessboard -->
     <table style="width: 270px; border: 1px solid">
+        <!--Uses a twig for loop to fill the color array-->
         {% for row in color_array %}
         <tr>
             {% for col in row %}
-                {% if col == 'b' %}
+                {% if col == 'y' %}
                 <td>
+                    <!--Represents the yellow square-->
                     <div style="border: 1px solid; width: 30px; height: 30px; background-color: #fff047"></div>
                 </td>
                 {% else %}
                 <td>
+                    <!--Represents the pink square-->
                     <div style="border: 1px solid; width: 30px; height: 30px; background-color: #ff00b8"></div>
                 </td>
                 {% endif %}
